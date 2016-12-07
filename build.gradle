@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+jar {
+  baseName = 'spring-mvc-subdomain'
+  version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile('org.springframework:spring-webmvc:4.3.4.RELEASE')
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '3.2.1'
+}
