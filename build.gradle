@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
   compile('org.springframework:spring-webmvc:4.3.4.RELEASE')
+  compile('org.springframework.boot:spring-boot-autoconfigure:1.4.2.RELEASE')
   compile('com.google.guava:guava:20.0')
   compile('org.slf4j:slf4j-api:1.7.21')
   compileOnly('javax.servlet:javax.servlet-api:3.0.1')

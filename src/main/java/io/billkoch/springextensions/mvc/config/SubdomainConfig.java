@@ -2,6 +2,8 @@ package io.billkoch.springextensions.mvc.config;
 
 import io.billkoch.springextensions.mvc.bind.annotation.SubdomainExtractor;
 import io.billkoch.springextensions.mvc.bind.annotation.SubdomainResolver;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -10,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.List;
 
 @Configuration
+@AutoConfigureAfter(WebMvcAutoConfiguration.class)
 public class SubdomainConfig extends WebMvcConfigurerAdapter {
 
     @Bean
